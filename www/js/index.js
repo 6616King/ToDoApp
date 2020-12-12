@@ -24,6 +24,36 @@ document.addEventListener('deviceready', onDeviceReady, false);
 function onDeviceReady() {
     // Cordova is now initialized. Have fun!
 
-    console.log('Running cordova-' + cordova.platformId + '@' + cordova.version);
-    document.getElementById('deviceready').classList.add('ready');
+    //login listener
+    $('#login_btn').click(login)
+    $('#signup_btn').click(signup)
+    $('#signup_c_btn').click(registerNewUser)
+}
+
+function registerNewUser(){
+    let userName = $('#newUserName').val()
+    let password = $('#newPassword').val()
+
+    localStorage.setItem("userName", userName)
+    localStorage.setItem("password", password)
+
+    window.location.href = "#login_page"
+}
+
+function login(){
+    let userName = $('#userName').val()
+    let password = $('#password').val()
+
+    if(userName == localStorage.getItem('userName') && password == localStorage.getItem('password')){
+        //Home page
+        window.location.href = "#home_page"
+
+        $('#welcome_msg').text('Welcome ' + userName)
+    }else{
+        alert("Invalid username or password, please try again.")
+    }
+}
+
+function signup(){
+    window.location.href = "#signup_page"
 }

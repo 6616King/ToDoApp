@@ -39,19 +39,103 @@
 
         <link rel="stylesheet" href="themes/ToDoApp.min.css" />
         <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
-        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
-        <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-        <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-        
+        <link rel="stylesheet" href="themes/jquery.mobile.structure-1.4.5.min.css" />
+        <script src="themes/jquery-1.11.1.min.js"></script>
+        <script src="themes/jquery.mobile-1.4.5.min.js"></script>
+
     </head>
+
     <body>
-        <div class="app">
-            <h1>Apache Cordova</h1>
-            <div id="deviceready" class="blink">
-                <p class="event listening">Connecting to Device</p>
-                <p class="event received">Device is Ready</p>
-            </div>
-        </div>
+        <!-- Login page -->
+        <div data-role="page" id="login_page">
+            
+            <div data-role="header">
+                <h2>Login</h2>
+            </div><!-- /header -->
+
+            <div role="main" class="ui-content">
+
+                <div>
+                    <img id="logo_img" src="img/logoc.png"/>
+                </div>
+
+                <form>
+                    <label for="userName">Username</label>
+                    <input type="text" name="userName" id="userName" value="">
+                    <label for="password">Password</label>
+                    <input type="password" data-clear-btn="false" name="password" id="password" value="" autocomplete="off">
+                </form>
+
+                <div style="text-align: center; padding-top: 5%;">
+                    <a href="#login" class="ui-btn ui-corner-all ui-shadow ui-btn-b" id="login_btn">Login</a>
+                </div>
+                <div style="text-align: center; padding-top: 5%; margin-bottom: 20%;">
+                    <a href="#signup" class="ui-btn ui-corner-all ui-shadow ui-btn-c" id="signup_btn">Sign Up</a>
+                </div>
+            </div><!-- /content -->
+
+            <div data-role="footer">
+                <h1>Created by King Ann Khoo</h1>
+            </div><!-- /footer -->
+        </div><!-- /page -->
+
+        <!-- Signup page -->
+        <div data-role="page" id="signup_page">
+
+            <div data-role="header">
+                <a href="index.html" class="ui-btn-left ui-btn ui-btn-b ui-shadow ui-corner-all ui-icon-carat-l ui-btn-icon-notext ui-nodisc-icon">Back</a>
+                <h2>Sign Up</h2>
+                
+            </div><!-- /header -->
+
+            <div role="main" class="ui-content">
+                <form>
+                    <label for="newUserName">Username:</label>
+                    <input type="text" name="newUserName" id="newUserName" value="">
+                    <label for="newPassword">Password:</label>
+                    <input type="password" data-clear-btn="false" name="newPassword" id="newPassword" value="" autocomplete="off">
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" id="email" value="">
+
+                    <fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
+                        <legend>Gender:</legend>
+                            <input type="radio" name="radio-choice-b" id="radio-choice-c" value="list" checked="checked">
+                            <label for="radio-choice-c">Male</label>
+                            <input type="radio" name="radio-choice-b" id="radio-choice-e" value="gallery">
+                            <label for="radio-choice-e">Female</label>
+                    </fieldset>
+                    
+                </form>
+
+                <div style="text-align: center; padding-top: 5%; margin-bottom: 20%;">
+                    <a href="#confirm" class="ui-btn ui-corner-all ui-shadow ui-btn-d" id="signup_c_btn">Confirm</a>
+                </div>
+            </div><!-- /content -->
+
+            <div data-role="footer">
+                <h1>Created by King Ann Khoo</h1>
+            </div><!-- /footer -->
+        </div><!-- /page -->
+
+        <!-- Home page -->
+        <div data-role="page" id="home_page">
+
+            <div data-role="header">
+                <img id="logo_img" src="img/logo.png"/>
+            </div><!-- /header -->
+
+            <div role="main" class="ui-content">
+                <span id="welcome_msg">Welcome User</span>
+
+                <p>I'm the second in the source order so I'm hidden when the page loads. I'm just shown if a link that references my id is beeing clicked.</p>
+                <p><a href="#foo">Back to foo</a></p>
+            </div><!-- /content -->
+
+            <div data-role="footer">
+                <h1>Created by King Ann Khoo</h1>
+            </div><!-- /footer -->
+        </div><!-- /page -->
+
         <script src="cordova.js"></script>
         <script src="js/index.js"></script>
     </body>
