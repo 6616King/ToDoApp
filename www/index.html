@@ -35,7 +35,7 @@
         <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
         <meta name="color-scheme" content="light dark">
         <link rel="stylesheet" href="css/index.css">
-        <title>Hello World</title>
+        <title>To Do App</title>
 
         <link rel="stylesheet" href="themes/ToDoApp.min.css" />
         <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
@@ -121,14 +121,25 @@
         <div data-role="page" id="home_page">
 
             <div data-role="header">
-                <img id="logo_img" src="img/logo.png"/>
+                <img id="logo_img_home" src="img/logo.png"/>
             </div><!-- /header -->
 
             <div role="main" class="ui-content">
-                <span id="welcome_msg">Welcome User</span>
+                <h2 id="welcome_msg" style="text-align: center;">Welcome User</h2>
+                <!-- add task -->
+                <div style="text-align: center; padding-top: 5%;">
+                    <input type="text" class="txtb" placeholder="Add a task" style="display: inline-block;">
+                    <a href="#addlist" class="ui-btn ui-corner-all ui-shadow ui-btn-b" id="addList" style="display: inline-block;">Add</a>
+                </div>
+                <!-- task list -->
+                <div class="notcomp">
+                    <h3>Not Completed</h3>
+                </div>
+                <!-- completed list -->
+                <div class="comp">
+                    <h3>Completed</h3>
+                </div>
 
-                <p>I'm the second in the source order so I'm hidden when the page loads. I'm just shown if a link that references my id is beeing clicked.</p>
-                <p><a href="#foo">Back to foo</a></p>
             </div><!-- /content -->
 
             <div data-role="footer">

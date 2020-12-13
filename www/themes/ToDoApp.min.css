@@ -18,6 +18,47 @@
 		padding-top: 10px;
 		padding-bottom: 10px;
 	}
+	
+	#logo_img_home{
+		display: block;
+		width: 15%;
+		margin-left: auto;
+		margin-right: auto;
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+
+	.txtb{
+		width: 100%;
+		border: none;
+		border-bottom: 2px solid #000;
+		background: none;
+		padding: 10px;
+		outline: none;
+		font-size: 18px;
+	  }
+	  
+	  .task{
+		width: 100%;
+		background: #29abe2;
+		color: white;
+		padding: 5%;
+		margin: 6px 0;
+		width: 90%;
+		overflow: hidden;
+		border-radius: 15px
+	  }
+	  
+	  .task i{
+		float: right;
+		margin: 0px 0px 0px 5%;
+		cursor: pointer;
+	  }
+	  
+	  .comp .task{
+		background:#00bb57;
+		color: #fff;
+	  }
 
 /* Globals */
 /* Font

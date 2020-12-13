@@ -28,6 +28,41 @@ function onDeviceReady() {
     $('#login_btn').click(login)
     $('#signup_btn').click(signup)
     $('#signup_c_btn').click(registerNewUser)
+    $('#addList').click(addList)
+}
+
+function addList(){
+    //13  means enter button
+    if ($(".txtb").val() != "")
+    {
+        //task
+        var task = $("<div class='task'></div>").text($(".txtb").val());
+
+        //delete button
+        var del = $("<i class='ui-btn ui-shadow ui-corner-all ui-icon-delete ui-btn-icon-notext ui-btn-d ui-btn-inline'></i>").click(function(){
+            var p = $(this).parent();
+            p.fadeOut(function(){
+            p.remove();
+            });
+        });
+
+        //complete button
+        var check = $("<i class='ui-btn ui-shadow ui-corner-all ui-icon-check ui-btn-icon-notext ui-btn-c ui-btn-inline'></i>").click(function(){
+            var p = $(this).parent();
+            p.fadeOut(function(){
+            $(".comp").append(p);
+            p.fadeIn();
+            });
+            $(this).remove();
+        });
+
+        task.append(del,check);
+        $(".notcomp").append(task);
+            //to clear the input
+        $(".txtb").val("");
+    }else{
+        alert("Please input text before add task.")
+    }
 }
 
 function registerNewUser(){
